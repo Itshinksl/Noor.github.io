@@ -1898,7 +1898,7 @@ section {
   width: 100%;
   padding: 20px;
   overflow-x: auto;
-  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si nécessaire */
+  flex-wrap: wrap;
   align-items: stretch;
 }
 
@@ -1912,6 +1912,7 @@ section {
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 400px;
 }
 
 .projet-content {
@@ -1919,24 +1920,37 @@ section {
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
+  height: 100%;
+}
+
+.projet-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .projet-card h3 {
   color: var(--primary-color);
   font-size: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .projet-card p {
   color: var(--text-color);
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .projet-btn {
-  display: block;
   margin-top: auto;
+  padding: 10px 0;
 }
 
 .btn-violet {
@@ -1948,6 +1962,9 @@ section {
   cursor: pointer;
   font-size: 14px;
   font-weight: 700;
+  display: inline-block;
+  width: auto;
+  min-width: 120px;
 }
 
 .btn-violet:hover {
