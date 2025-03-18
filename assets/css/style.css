@@ -2065,15 +2065,24 @@ section {
 
 .tag {
   background: var(--primary-color);
-  color: white;
-  padding: 6px 12px;
+  color: var(--dark-color);
+  padding: 8px 16px;
   border-radius: 20px;
   font-size: 14px;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .tag:hover {
-  background: var(--primary-color-dark);
+  background: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .veille-sources {
