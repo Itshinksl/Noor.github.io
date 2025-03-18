@@ -92,9 +92,23 @@
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
+    const navMenu = select('.nav-menu');
+    navMenu.classList.toggle('active');
+    this.classList.toggle('bi-list');
+    this.classList.toggle('bi-x');
+  })
+
+  /**
+   * Close mobile nav when clicking on links
+   */
+  on('click', '.nav-menu a', function(e) {
+    const navMenu = select('.nav-menu');
+    if (navMenu.classList.contains('active')) {
+      navMenu.classList.remove('active');
+      const navbarToggle = select('.mobile-nav-toggle');
+      navbarToggle.classList.add('bi-list');
+      navbarToggle.classList.remove('bi-x');
+    }
   })
 
   /**
